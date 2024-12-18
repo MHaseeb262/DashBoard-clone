@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promage DashBoard</title>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+
+    <div class="dasboard">
+
+        <!-- Side menu section start -->
+        <aside id="dashboars-side-menu">
+            <div id="side-container" class="side-container">
+
+                <div id="brand-name" class="brand-name">
+                    <img src="/images/Brand_Icon.svg" alt="Brand_Icon">
+                    <h2>Promage</h2>
+                </div>
+
+                <div id="collapse-icon" class="left-arrow">
+                    <img id="menu-collapse" src="/images/left-arrow-icon.svg" alt="left-arrow-icon">
+                </div>
+
+                <div id="create-new-project" class="create-new-project">
+                    <div class="add-project-btn-icon">
+                        <img src="/images/add-project.svg" alt="add-project-btn-icon">
+                    </div>
+                    <p>Create new <br> project</p>
+                </div>
+
+                <div id="collapse-btn-icon" class="collapse-btn-icon">
+                    <img src="/images/add-project.svg" alt="add-project-btn-icon">
+                </div>
+
+                <div id="dashBoard-menu" class="dashBoard-menu">
+
+                    <ul class="menu-list">
+                        <li class="list-item item01 hide">
+                            <img src="/images/dashboard-menu-icon.svg" alt="dashboard-menu-icon">
+                            <span title="Dashboard" class="item-txt">Dashboard</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/briefcase.svg" alt="dashboard-menu-icon">
+                            <span title="Projects" class="item-txt">Projects</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/task.svg" alt="dashboard-menu-icon">
+                            <span title="Tasks" class="item-txt">Tasks</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/cpu-setting.svg" alt="dashboard-menu-icon">
+                            <span title="Dashboard" class="item-txt">Dashboard</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/clock.svg" alt="dashboard-menu-icon">
+                            <span title="Time log" class="item-txt">Time log</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/data.svg" alt="dashboard-menu-icon">
+                            <span title="Resource mgnt" class="item-txt">Resource mgnt</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/people.svg" alt="dashboard-menu-icon">
+                            <span title="Users" class="item-txt">Users</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/layer.svg" alt="dashboard-menu-icon">
+                            <span title="Project template" class="item-txt">Project template</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="/images/setting-2.svg" alt="dashboard-menu-icon">
+                            <span title="Menu settings" class="item-txt">Menu settings</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="question-mark-icon">
+                    <img src="/images/question-mark-icon.svg" alt="question-mark-icon">
+                </div>
+
+            </div>
+        </aside>
+        <!-- Side menu section end -->
+
+        <div class="dashboard-page">
+            <!-- Navigation Bar Start  -->
+            <header>
+                <div id="head-section" class="container">
+                    <nav class="nav-bar">
+
+                        <h1>Dashboard</h1>
+                        <div class="nav-search">
+
+                            <div class="search-bar">
+
+                                <svg class="magnifying-glass-icon" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.54183 1.52075C5.11205 1.52075 1.521 5.1118 1.521 9.54158C1.521 13.9714 5.11205 17.5624 9.54183 17.5624C13.9716 17.5624 17.5627 13.9714 17.5627 9.54158C17.5627 5.1118 13.9716 1.52075 9.54183 1.52075ZM0.145996 9.54158C0.145996 4.35241 4.35265 0.145752 9.54183 0.145752C14.731 0.145752 18.9377 4.35241 18.9377 9.54158C18.9377 14.7308 14.731 18.9374 9.54183 18.9374C4.35265 18.9374 0.145996 14.7308 0.145996 9.54158Z"
+                                        fill="#292D32" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.8474 16.8471C17.1158 16.5786 17.5511 16.5786 17.8196 16.8471L19.653 18.6804C19.9215 18.9489 19.9215 19.3842 19.653 19.6527C19.3845 19.9212 18.9492 19.9212 18.6807 19.6527L16.8474 17.8194C16.5789 17.5509 16.5789 17.1156 16.8474 16.8471Z"
+                                        fill="#292D32" />
+                                </svg>
+                                <input class="input-search" type="search" name="search" id="search"
+                                    placeholder="Search for anything...">
+
+                            </div>
+                            <div class="bell-icon">
+
+                                <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.83066 7.16748C2.83066 3.75362 5.60429 0.97998 9.01816 0.97998C12.4229 0.97998 15.2057 3.76278 15.2057 7.16748V9.81665C15.2057 10.0136 15.2502 10.3019 15.3347 10.6099C15.4182 10.9142 15.526 11.1847 15.6241 11.3564L16.6752 13.1021C17.5053 14.4856 16.8417 16.2878 15.3125 16.7941C11.2205 18.161 6.80552 18.1608 2.71363 16.7937L2.71108 16.7929C1.93887 16.5315 1.35976 15.9911 1.10083 15.2918C0.841601 14.5917 0.929786 13.8037 1.3524 13.1014L2.40513 11.3529C2.40536 11.3525 2.40559 11.3522 2.40583 11.3518C2.50621 11.183 2.61616 10.9135 2.70102 10.6079C2.78613 10.3013 2.83066 10.0134 2.83066 9.81665V7.16748ZM9.01816 2.35498C6.36369 2.35498 4.20566 4.51301 4.20566 7.16748V9.81665C4.20566 10.1791 4.13102 10.597 4.02592 10.9756C3.92076 11.3545 3.76978 11.7491 3.58618 12.057L3.58464 12.0596L2.53057 13.8103C2.53054 13.8103 2.53061 13.8102 2.53057 13.8103C2.30246 14.1895 2.28973 14.5428 2.39027 14.8144C2.49104 15.0865 2.73197 15.348 3.15068 15.49C6.95974 16.7623 11.0688 16.7622 14.8778 15.4896L14.8799 15.4889C15.5681 15.2614 15.8757 14.4428 15.4964 13.81C15.4963 13.8099 15.4965 13.8102 15.4964 13.81L14.4359 12.0486C14.2598 11.7434 14.1123 11.3515 14.0087 10.9736C13.9052 10.5964 13.8307 10.1789 13.8307 9.81665V7.16748C13.8307 4.52218 11.6635 2.35498 9.01816 2.35498Z"
+                                        fill="#292D32" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.68218 1.68247C7.04834 0.748129 7.9574 0.0908203 9.01811 0.0908203C10.0788 0.0908203 10.9879 0.74813 11.354 1.68247C11.4496 1.92637 11.3983 2.20339 11.2217 2.39686C11.0451 2.59032 10.7738 2.6666 10.5223 2.59356C10.268 2.51973 10.0113 2.46402 9.75122 2.43249L9.74867 2.43218C8.9563 2.33313 8.2076 2.39192 7.51419 2.59349C7.2626 2.66663 6.99131 2.59041 6.81463 2.39694C6.63794 2.20348 6.58658 1.92641 6.68218 1.68247Z"
+                                        fill="#292D32" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.95557 16.4717C6.95557 17.0332 7.18914 17.5571 7.56087 17.9289C7.9326 18.3006 8.45659 18.5342 9.01807 18.5342C10.1509 18.5342 11.0806 17.6045 11.0806 16.4717H12.4556C12.4556 18.3639 10.9103 19.9092 9.01807 19.9092C8.07621 19.9092 7.20687 19.5194 6.5886 18.9011C5.97033 18.2829 5.58057 17.4135 5.58057 16.4717H6.95557Z"
+                                        fill="#292D32" />
+                                </svg>
+
+                            </div>
+                            <div class="product-manager">
+                                <img src="/images/manager-pic.png" alt="manager-pic">
+                                <div class="manager-dropdown">
+
+                                    <div class="about-manager">
+                                        <p class="manager-name">Alex meian</p>
+                                        <p class="manager-post">Prodcut manager</p>
+                                    </div>
+                                    <img id="dropdown-manager-icon" src="/images/drop-down-icon.svg"
+                                        alt="drop-down-icon">
+                                    <div id="dropdown-box" class="dropdown-box">
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-list-item"><a href="#">Asim Siddiqui</a></li>
+                                            <li class="dropdown-list-item"><a href="#">Rizwan Qureshi</a></li>
+                                            <li class="dropdown-list-item"><a href="#">Alex meian</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </nav>
+                </div>
+            </header>
+            <!-- Navigation Bar End  -->
+
+            <!-- Overview section start  -->
+            <section id="overview-section" class="overview-section">
+                <div class="overview-container">
+
+                    <div class="overview-row01">
+
+                        <span>Overview</span>
+                        <div class="remaining-days">
+                            <p>Last 30 days</p>
+                            <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                        </div>
+
+                    </div>
+                    <div class="overview-row02">
+                        <div class="box total-revenue">
+
+                            <div class="box-icon revenue-icon">
+                                <img src="/images/revenue-icon.svg" alt="revenue-icon">
+                            </div>
+                            <span>Total revenue</span>
+                            <p>$53,00989</p>
+                            <div class="health">
+                                <img src="/images/arrow-right-inc.svg" alt="Right increase arrow">
+                                <span>12% increase from last month</span>
+                            </div>
+
+                        </div>
+                        <div class="box project">
+
+                            <div class="box-icon briefcase-icon">
+
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.17547 5.24913C1.98709 4.28419 3.37861 3.8125 5.41639 3.8125H14.5831C16.6208 3.8125 18.0124 4.28419 18.824 5.24913C19.6277 6.20469 19.7042 7.46006 19.5754 8.63061L18.8875 15.9674C18.7866 16.9098 18.55 17.943 17.7085 18.7117C16.8733 19.4748 15.5793 19.8542 13.6664 19.8542H6.33306C4.42011 19.8542 3.12613 19.4748 2.29091 18.7117C1.44947 17.943 1.21294 16.9098 1.11197 15.9674L1.111 15.9583L0.424086 8.63063C0.295268 7.46008 0.371716 6.2047 1.17547 5.24913ZM2.22773 6.13421C1.79531 6.6483 1.6736 7.42076 1.79139 8.48522L1.79265 8.49665L2.47962 15.8254C2.57133 16.6773 2.76119 17.279 3.21833 17.6966C3.68249 18.1206 4.561 18.4792 6.33306 18.4792H13.6664C15.4384 18.4792 16.317 18.1206 16.7811 17.6966C17.2383 17.279 17.4281 16.6773 17.5198 15.8254L18.208 8.48521C18.3258 7.42075 18.2041 6.6483 17.7717 6.13421C17.3458 5.62789 16.4594 5.1875 14.5831 5.1875H5.41639C3.54001 5.1875 2.6536 5.62789 2.22773 6.13421Z"
+                                        fill="#FFFFFF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.06056 2.71276C7.02161 3.01104 7.02051 3.35 7.02051 3.76658V4.49992C7.02051 4.87961 6.71271 5.18742 6.33301 5.18742C5.95331 5.18742 5.64551 4.87961 5.64551 4.49992L5.64551 3.74276C5.64549 3.35453 5.64546 2.93048 5.69713 2.53476C5.75066 2.12473 5.86537 1.68942 6.13411 1.30059C6.69945 0.482619 7.73506 0.145752 9.26634 0.145752H10.733C12.2643 0.145752 13.2999 0.482619 13.8652 1.30059C14.134 1.68942 14.2487 2.12473 14.3022 2.53476C14.3539 2.93048 14.3539 3.35453 14.3538 3.74277L14.3538 4.49992C14.3538 4.87961 14.046 5.18742 13.6663 5.18742C13.2866 5.18742 12.9788 4.87961 12.9788 4.49992V3.76658C12.9788 3.35 12.9777 3.01104 12.9388 2.71276C12.9007 2.42068 12.832 2.22406 12.7341 2.08237C12.5661 1.8393 12.1351 1.52075 10.733 1.52075H9.26634C7.86429 1.52075 7.43324 1.8393 7.26524 2.08237C7.16731 2.22406 7.09869 2.42068 7.06056 2.71276Z"
+                                        fill="#FFFFFF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.85425 10.6882C8.85354 10.7537 8.85352 10.8283 8.85352 10.9167V11.8608C8.85352 12.1189 8.85578 12.3087 8.87819 12.4698C8.89974 12.6246 8.93396 12.7 8.96297 12.7409C8.99532 12.7865 9.15654 12.9792 9.99936 12.9792C10.846 12.9792 11.0053 12.7847 11.037 12.7395C11.0661 12.6978 11.1003 12.6213 11.1215 12.4646C11.1435 12.3017 11.1452 12.111 11.1452 11.8517V10.9167C11.1452 10.8283 11.1452 10.7537 11.1445 10.6882C11.079 10.6875 11.0044 10.6875 10.916 10.6875H9.08269C8.99428 10.6875 8.91969 10.6875 8.85425 10.6882ZM9.05258 9.3125C9.06263 9.31251 9.07266 9.31251 9.08269 9.31251H10.916C10.9261 9.31251 10.9361 9.31251 10.9461 9.3125C11.1488 9.31246 11.3543 9.31241 11.5219 9.33104C11.6928 9.35002 11.9766 9.40078 12.2042 9.62846C12.4319 9.85613 12.4827 10.1399 12.5017 10.3108C12.5203 10.4784 12.5202 10.6839 12.5202 10.8866C12.5202 10.8966 12.5202 10.9066 12.5202 10.9167V11.862C12.5202 12.1 12.5202 12.3817 12.484 12.649C12.4465 12.9263 12.3644 13.241 12.1632 13.5283C11.7343 14.1407 10.9769 14.3542 9.99936 14.3542C9.02717 14.3542 8.27173 14.1435 7.84117 13.536C7.63871 13.2504 7.55492 12.9367 7.51631 12.6593C7.47857 12.3881 7.47852 12.1024 7.47852 11.8608V10.9167C7.47852 10.9066 7.47852 10.8966 7.47852 10.8866C7.47847 10.6839 7.47843 10.4784 7.49705 10.3108C7.51604 10.1399 7.5668 9.85613 7.79447 9.62846C8.02214 9.40078 8.30596 9.35002 8.47682 9.33104C8.64445 9.31241 8.84987 9.31246 9.05258 9.3125Z"
+                                        fill="#FFFFFF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.4016 8.67893C19.6249 8.98601 19.557 9.41598 19.2499 9.63931C17.0351 11.2501 14.5047 12.2081 11.919 12.5337C11.5423 12.5812 11.1984 12.3143 11.151 11.9375C11.1035 11.5608 11.3705 11.217 11.7472 11.1695C14.1114 10.8718 16.421 9.99653 18.4412 8.52729C18.7483 8.30397 19.1783 8.37186 19.4016 8.67893Z"
+                                        fill="#FFFFFF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.834096 8.94232C1.04855 8.62899 1.47641 8.54884 1.78974 8.76329C3.75956 10.1115 5.98087 10.9241 8.24293 11.1774C8.62027 11.2197 8.89191 11.5598 8.84966 11.9371C8.80741 12.3145 8.46727 12.5861 8.08993 12.5439C5.60367 12.2655 3.1683 11.3731 1.01312 9.89797C0.699791 9.68351 0.619638 9.25565 0.834096 8.94232Z"
+                                        fill="#FFFFFF" />
+                                </svg>
+
+                            </div>
+                            <span>Project</span>
+                            <p>95 <span>/100</span></p>
+                            <div class="health">
+                                <img src="/images/arrow-right-dec.svg" alt="Right increase arrow">
+                                <span>10% decrease from last month</span>
+                            </div>
+
+                        </div>
+                        <div class="box time-spent">
+
+                            <div class="box-icon clock-icon">
+
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.99967 1.52075C5.31937 1.52075 1.52051 5.31961 1.52051 9.99992C1.52051 14.6802 5.31937 18.4791 9.99967 18.4791C14.68 18.4791 18.4788 14.6802 18.4788 9.99992C18.4788 5.31961 14.68 1.52075 9.99967 1.52075ZM0.145508 9.99992C0.145508 4.56022 4.55998 0.145752 9.99967 0.145752C15.4394 0.145752 19.8538 4.56022 19.8538 9.99992C19.8538 15.4396 15.4394 19.8541 9.99967 19.8541C4.55998 19.8541 0.145508 15.4396 0.145508 9.99992Z"
+                                        fill="#FFFFFF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.66016 5.19653C10.0399 5.19653 10.3477 5.50434 10.3477 5.88403V9.64237C10.3477 9.78312 10.4014 9.98713 10.5209 10.1967C10.6404 10.4063 10.7886 10.5562 10.909 10.6276L10.9108 10.6287L10.9108 10.6287L13.7525 12.3245C14.0785 12.5191 14.1851 12.9411 13.9905 13.2672C13.7959 13.5932 13.3739 13.6998 13.0478 13.5052L10.208 11.8105C10.2077 11.8103 10.2074 11.8101 10.207 11.8099C9.83289 11.5879 9.5322 11.2386 9.32649 10.8778C9.12058 10.5168 8.97266 10.0791 8.97266 9.64237V5.88403C8.97266 5.50434 9.28046 5.19653 9.66016 5.19653Z"
+                                        fill="#FFFFFF" />
+                                </svg>
+
+                            </div>
+                            <span>Time spent</span>
+                            <p>1022 <span>/1300 Hrs</span></p>
+                            <div class="health">
+                                <img src="/images/arrow-right-inc.svg" alt="Right increase arrow">
+                                <span>8% increase from last month</span>
+                            </div>
+
+                        </div>
+                        <div class="box resources">
+
+                            <div class="box-icon User-icon">
+                                <img src="/images/user-icon.svg" alt="User-icon">
+                            </div>
+                            <span>Resources</span>
+                            <p>101 <span>/120</span></p>
+                            <div class="health">
+                                <img src="/images/arrow-right-inc.svg" alt="Right increase arrow">
+                                <span>2% increase from last month</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Overview section End  -->
+
+            <!-- Projecy progres section start  -->
+            <div class="progress">
+
+                <section class="project-summary">
+                    <div class="project-container">
+
+                        <div class="progress-summary-head">
+
+                            <p>Project summary</p>
+                            <div class="project-saction">
+
+                                <div class="dropdown prject-dropdown">
+                                    <p>Project</p>
+                                    <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                </div>
+                                <div class="dropdown prject-manager-dropdown">
+                                    <p>Project manager</p>
+                                    <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                </div>
+                                <div class="dropdown prject-status-dropdown">
+                                    <p>Status</p>
+                                    <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="progress-summary-container">
+
+                            <ul>
+                                <li>Name</li>
+                                <li>Nelsa web developement</li>
+                                <li>Datascale AI app </li>
+                                <li>Media channel branding</li>
+                                <li>Corlax iOS app development</li>
+                                <li>Website builder development</li>
+                            </ul>
+                            <ul>
+                                <li>Project manager</li>
+                                <li>Om prakash sao</li>
+                                <li>Neilsan mando</li>
+                                <li>Tiruvelly priya</li>
+                                <li>Matte hannery</li>
+                                <li>Sukumar rao</li>
+                            </ul>
+                            <ul>
+                                <li>Due date</li>
+                                <li>May 25, 2023</li>
+                                <li>Jun 20, 2023</li>
+                                <li>July 13, 2023</li>
+                                <li>Dec 20, 2023</li>
+                                <li>Mar 15, 2024</li>
+                            </ul>
+                            <ul>
+                                <li>Status</li>
+                                <li>Completed</li>
+                                <li>Delayed</li>
+                                <li>At risk</li>
+                                <li>Completed</li>
+                                <li>On going</li>
+                            </ul>
+                            <ul>
+                                <li>Progress</li>
+                                <li>100%</li>
+                                <li>35%</li>
+                                <li>68%</li>
+                                <li>100%</li>
+                                <li>50%</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="overall-progress">
+
+                </section>
+
+            </div>
+            <!-- Projecy progres section End  -->
+        </div>
+
+    </div>
+
+    <script src="/JS/main.js"></script>
+</body>
+
+</html>
