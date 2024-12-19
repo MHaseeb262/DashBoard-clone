@@ -34,7 +34,7 @@
                     <p>Create new <br> project</p>
                 </div>
 
-                <div id="collapse-btn-icon" class="collapse-btn-icon">
+                <div id="create-project-btn-icon" class="create-project-btn-icon">
                     <img src="/images/add-project.svg" alt="add-project-btn-icon">
                 </div>
 
@@ -92,7 +92,7 @@
         <div class="dashboard-page">
             <!-- Navigation Bar Start  -->
             <header>
-                <div id="head-section" class="container">
+                <div id="head-section" class="head-container">
                     <nav class="nav-bar">
 
                         <h1>Dashboard</h1>
@@ -259,14 +259,14 @@
             <!-- Overview section End  -->
 
             <!-- Projecy progres section start  -->
-            <div class="progress">
+            <div class="container" id="progress-section">
 
                 <section class="project-summary">
                     <div class="project-container">
 
                         <div class="progress-summary-head">
 
-                            <p>Project summary</p>
+                            <h3>Project summary</h3>
                             <div class="project-saction">
 
                                 <div class="dropdown prject-dropdown">
@@ -288,7 +288,7 @@
                         <div class="progress-summary-container">
 
                             <ul>
-                                <li>Name</li>
+                                <li><h4>Name</h4></li>
                                 <li>Nelsa web developement</li>
                                 <li>Datascale AI app </li>
                                 <li>Media channel branding</li>
@@ -296,7 +296,7 @@
                                 <li>Website builder development</li>
                             </ul>
                             <ul>
-                                <li>Project manager</li>
+                                <li><h4>Project manager</h4></li>
                                 <li>Om prakash sao</li>
                                 <li>Neilsan mando</li>
                                 <li>Tiruvelly priya</li>
@@ -304,39 +304,284 @@
                                 <li>Sukumar rao</li>
                             </ul>
                             <ul>
-                                <li>Due date</li>
+                                <li><h4>Due date</h4></li>
                                 <li>May 25, 2023</li>
                                 <li>Jun 20, 2023</li>
                                 <li>July 13, 2023</li>
                                 <li>Dec 20, 2023</li>
                                 <li>Mar 15, 2024</li>
                             </ul>
-                            <ul>
-                                <li>Status</li>
-                                <li>Completed</li>
-                                <li>Delayed</li>
-                                <li>At risk</li>
-                                <li>Completed</li>
-                                <li>On going</li>
+                            <ul class="status-list">
+                                <li><h4>Status</h4></li>
+                                <li><div class="status complete">Completed</div></li>
+                                <li><div class="status delayed">Delayed</div></li>
+                                <li><div class="status at-risk">At risk</div></li>
+                                <li><div class="status complete">Completed</div></li>
+                                <li><div class="status on-going">On going</div></li>
                             </ul>
-                            <ul>
-                                <li>Progress</li>
-                                <li>100%</li>
-                                <li>35%</li>
-                                <li>68%</li>
-                                <li>100%</li>
-                                <li>50%</li>
+                            <ul  class="progress-bar">
+                                <li><h4>Progress</h4></li>
+                                <li>
+                                    <div class="progress-circle" data-percent="100" data-color="#1A932E">
+                                        <svg viewbox="0 0 100 100">
+                                            <circle class="background" cx="50" cy="50" r="45"/>
+                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                        </svg>
+                                        <div class="progress-txt">100%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress-circle" data-percent="35" data-color="#DFA510">
+                                        <svg viewbox="0 0 100 100">
+                                            <circle class="background" cx="50" cy="50" r="45"/>
+                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                        </svg>
+                                        <div class="progress-txt">35%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress-circle" data-percent="68" data-color="#EE201C">
+                                        <svg viewbox="0 0 100 100">
+                                            <circle class="background" cx="50" cy="50" r="45"/>
+                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                        </svg>
+                                        <div class="progress-txt">68%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress-circle" data-percent="100" data-color="#1A932E">
+                                        <svg viewbox="0 0 100 100">
+                                            <circle class="background" cx="50" cy="50" r="45"/>
+                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                        </svg>
+                                        <div class="progress-txt">100%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress-circle" data-percent="50" data-color="#E65F2B">
+                                        <svg viewbox="0 0 100 100">
+                                            <circle class="background" cx="50" cy="50" r="45"/>
+                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                        </svg>
+                                        <div class="progress-txt">50%</div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
 
                     </div>
                 </section>
-                <section class="overall-progress">
+                <aside class="overall-progress">
 
-                </section>
+                    <div class="overall-progress-head">
+                        <h2>Overall Progress</h2>
+                        <div class="all-progress-dropdown">
+                            <p>All</p>
+                            <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                        </div>
+                    </div>
+
+                </aside>
 
             </div>
             <!-- Projecy progres section End  -->
+
+             <!-- Remaining work section start -->
+              <div class="container" id="remaining-work-section">
+
+                <section class="today-task">
+                    <div class="today-task-container">
+
+                        <h3>Today task</h3>
+                        <div class="task-head">
+                            <div class="all">
+
+                                <p>All</p>
+                                <div class="badge">10</div>
+
+                            </div>
+                            <div class="important">
+                                <p>Important</p>
+                            </div>
+                            <div class="notes">
+
+                                <p>Notes</p>
+                                <div class="badge">05</div>
+
+                            </div>
+                            <div class="links">
+
+                                <p>Links</p>
+                                <div class="badge">10</div>
+
+                            </div>
+                        </div>
+                        <div class="task-container">
+
+                            <div class="task01">
+
+                                <div class="task">
+                                    <div class="true-box">
+                                        <img src="/images/tick-icon.svg" alt="tick-icon">
+                                    </div>
+                                    <span>Create a user flow of social application design</span>
+                                </div>
+                                <div class="approved">Approved</div>
+
+                            </div>
+                            <div class="task02">
+
+                                <div class="task">
+                                    <div class="true-box">
+                                        <img src="/images/tick-icon.svg" alt="tick-icon">
+                                    </div>
+                                    <span>Create a user flow of social application design</span>
+                                </div>
+                                <div class="in-review">In review</div>
+
+                            </div>
+                            <div class="task03">
+
+                                <div class="task">
+                                    <div class="true-box">
+                                        <img src="/images/tick-icon.svg" alt="tick-icon">
+                                    </div>
+                                    <span>Landing page design for Fintech project of singapore</span>
+                                </div>
+                                <div class="in-review">In review</div>
+
+                            </div>
+                            <div class="task04">
+
+                                <div class="task">
+                                    <div class="true-box un-marked">
+                                        <img src="/images/tick-icon.svg" alt="tick-icon">
+                                    </div>
+                                    <span>Interactive prototype for app screens of deltamine project</span>
+                                </div>
+                                <div class="on-going">On going</div>
+
+                            </div>
+                            <div class="task05">
+
+                                <div class="task">
+                                    <div class="true-box">
+                                        <img src="/images/tick-icon.svg" alt="tick-icon">
+                                    </div>
+                                    <span>Interactive prototype for app screens of deltamine project</span>
+                                </div>
+                                <div class="approved">Approved</div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+                <aside class="project-workload">
+
+                    <div class="project-workload-head">
+
+                        <h4>Projects Workload</h4>
+                        <div class="workload-dropdown">
+                            <p>Last 3 months</p>
+                            <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                        </div>
+
+                    </div>
+                    <div class="project-workload-container">
+
+                        <ul>
+                            <li>Sam</li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count top-count">
+                                <div>07</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Meldy</li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count top-count">
+                                <div>08</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Ken</li>
+                            <li class="project-count top-count">
+                                <div>02</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Dmitry</li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count top-count active">
+                                <div>10</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Vego</li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count top-count">
+                                <div>08</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Kadin</li>
+                            <li class="project-count top-count">
+                                <div>02</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Melrn</li>
+                            <li class="project-count">
+                                <div></div>
+                            </li>
+                            <li class="project-count top-count">
+                                <div>07</div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </aside>
+
+              </div>
+             <!-- Remaining work section end -->
         </div>
 
     </div>

@@ -33,7 +33,7 @@ body {
 /* Side-menu Start  */
 .side-container {
     width: 260px;
-    height: 1080px;
+    height: 1114px;
     padding: 35px;
     background-color: #060606;
     display: flex;
@@ -59,7 +59,7 @@ body {
 }
 
 #brand-name {
-    transition: visibility 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .left-arrow {
@@ -105,7 +105,7 @@ body {
     cursor: pointer;
 }
 
-.collapse-btn-icon {
+.create-project-btn-icon {
     width: 48px;
     height: 48px;
     background-color: #E65F2B;
@@ -188,7 +188,7 @@ body {
 /* Side-menu End  */
 
 /* Navigation-bar-start */
-.container {
+.head-container {
     width: calc(100vw - 260px - 17px);
     height: 100px;
     padding: 0 30px;
@@ -199,7 +199,10 @@ body {
     left: 260px; */
 }
 
-#head-section {
+#head-section,
+#overview-section,
+#remaining-work-section,
+#progress-section {
     transition: width 0.5s ease-in-out;
 }
 
@@ -298,11 +301,11 @@ body {
     letter-spacing: 0.2px;
 }
 
-#dropdown-manager-icon{
+#dropdown-manager-icon {
     transition: transform 0.5s ease-in-out;
 }
 
-.dropdown-box{
+.dropdown-box {
     width: 160px;
     padding: 16px 0;
     position: absolute;
@@ -312,18 +315,18 @@ body {
     opacity: 0;
 }
 
-#dropdown-box{
+#dropdown-box {
     transition: all 0.5s ease-in-out
 }
 
-.dropdown-list{
+.dropdown-list {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 11px;
 }
 
-.dropdown-list-item{
+.dropdown-list-item {
     padding: 13px;
     font-family: 'Aeonik';
     letter-spacing: 0.2px;
@@ -333,11 +336,11 @@ body {
     border-bottom: 0.5px solid #dfd1c8;
 }
 
-.dropdown-list :hover{
+.dropdown-list :hover {
     background-color: #F1F1F1;
 }
 
-.dropdown-list-item a{
+.dropdown-list-item a {
     color: #060606;
     text-decoration: none;
 }
@@ -348,10 +351,6 @@ body {
 .overview-section {
     width: calc(100vw - 260px - 17px);
     padding: 15px 30px;
-}
-
-#overview-section {
-    transition: width 0.5s ease-in-out;
 }
 
 .overview-container {
@@ -425,79 +424,81 @@ body {
     background-color: #F0C274;
 }
 
-.box span{
+.box span {
     font-family: 'Aeonik';
     color: #797979;
-    font-size: 14px;    
+    font-size: 14px;
 }
 
-.box p{
+.box p {
     font-family: 'Aeonik';
     color: #060606;
-    font-size: 28px;    
+    font-size: 28px;
     letter-spacing: 0.1px;
 }
 
-.box p span{
+.box p span {
     font-family: 'Aeonik';
     color: #060606;
-    font-size: 16px;    
+    font-size: 16px;
     letter-spacing: 0.4px;
 }
 
-.health{
+.health {
     display: flex;
     align-items: flex-start;
     gap: 5px;
 }
 
-.health span{
+.health span {
     font-family: 'Aeonik';
     color: #060606;
-    font-size: 11px;    
+    font-size: 11px;
     letter-spacing: 0.2px;
 }
 
 /* overview section End */
 
 /* progress section start */
-.progress{
+.container {
+    width: calc(100vw - 260px - 17px);
     padding: 15px 30px;
     display: flex;
     gap: 30px;
 }
 
-.project-summary{
+.project-summary {
+    width: 62%;
     padding: 18px 18px 29px;
     border-radius: 14px;
     background-color: rgba(255, 255, 255, 0.34);
 }
 
-.project-container{
+.project-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.progress-summary-head{
+.progress-summary-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.progress-summary-head p{
+.progress-summary-head h3 {
     font-family: 'Aeonik';
     color: #060606;
-    font-size: 16px;    
-    letter-spacing: 0.1px;    
+    font-size: 16px;
+    letter-spacing: 0.2px;
 }
 
-.project-saction{
+.project-saction {
     display: flex;
     gap: 8px;
 }
 
-.dropdown{
+.dropdown {
     padding: 14px;
     border-radius: 21px;
     display: flex;
@@ -505,21 +506,353 @@ body {
     background-color: #FFFFFF;
 }
 
-.dropdown p{
+.dropdown p {
     font-family: 'Aeonik';
     color: #060606;
-    font-size: 14px;    
-    letter-spacing: 0.1px;    
+    font-size: 14px;
+    letter-spacing: 0.1px;
 }
 
-.progress-summary-container{
+.progress-summary-container {
     display: flex;
+    justify-content: space-between;
 }
 
-.progress-summary-container ul{
+.progress-summary-container ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 27px;
 }
+
+.progress-summary-container ul h4 {
+    padding-bottom: 10px;
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    /* border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); */
+}
+
+.progress-summary-container ul li {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    display: flex;
+}
+
+.status-list {
+    gap: 18px !important;
+}
+
+.status-list h4 {
+    padding-bottom: 15px !important;
+}
+
+.complete,
+.approved {
+    padding: 5px 8px;
+    border-radius: 20px;
+    background-color: rgba(26, 147, 46, 0.18);
+    color: #1A932E;
+}
+
+.delayed {
+    padding: 5px 8px;
+    border-radius: 20px;
+    background-color: rgba(226, 177, 51, 0.18);
+    color: #DFA510;
+}
+
+.at-risk,
+.in-review {
+    padding: 5px 8px;
+    border-radius: 20px;
+    background-color: rgba(238, 32, 28, 0.18);
+    color: #EE201C;
+}
+
+.on-going {
+    padding: 5px 8px;
+    border-radius: 20px;
+    background-color: rgba(223, 95, 43, 0.18);
+    color: #E65F2B;
+}
+
+.progress-bar {
+    align-items: center;
+    gap: 15px !important;
+}
+
+.progress-circle {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.progress-circle svg {
+    width: 100%;
+    height: 100%;
+}
+
+.progress-circle .background {
+    fill: none;
+    stroke: #EEE;
+    stroke-width: 11;
+}
+
+.progress-circle .progress {
+    fill: none;
+    stroke-width: 11;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.progress-circle .progress-txt {
+    font-family: 'Aeonik';
+    font-size: 9px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overall-progress {
+    width: 38%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.34);
+}
+
+.overall-progress-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overall-progress-head h2 {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+}
+
+.all-progress-dropdown {
+    padding: 8px 14px;
+    display: flex;
+    gap: 11px;
+    background-color: #FFFFFF;
+    border-radius: 17px;
+}
+
+.all-progress-dropdown p {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+}
+
 /* progress section End */
+
+/* Remaining work section start */
+
+.today-task {
+    width: 62%;
+    padding: 18px 18px 29px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.34);
+}
+
+.today-task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.today-task-container h3 {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+}
+
+.task-head {
+    display: flex;
+    gap: 36px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
+}
+
+.all,
+.notes,
+.links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.all p,
+.notes p,
+.links p,
+.important p {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+}
+
+.important {
+    /* border-bottom: 1px solid #2B5CE6; */
+}
+
+.badge {
+    width: 18px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: rgba(43, 92, 230, 0.18);
+    color: #2B5CE6;
+    font-family: 'Aeonik';
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.task01,
+.task02,
+.task03,
+.task04,
+.task05 {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task {
+    display: flex;
+    gap: 11px;
+}
+
+.task span {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+}
+
+.true-box {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #E65F2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.un-marked {
+        background-color: transparent;
+        border: 1px solid rgba(6, 6, 6, 0.64);
+    }
+}
+
+/* project-workload section start  */
+.project-workload {
+    width: 38%;
+    padding: 18px 18px 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.34);
+}
+
+.project-workload-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-workload-head h4 {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+}
+
+.workload-dropdown {
+    padding: 8px 14px;
+    display: flex;
+    gap: 11px;
+    background-color: #FFFFFF;
+    border-radius: 17px;
+}
+
+.workload-dropdown p {
+    font-family: 'Aeonik';
+    color: #060606;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+}
+
+.project-workload-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.project-workload-container ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.project-workload-container ul li {
+    padding-top: 12px;
+    font-family: 'Aeonik';
+    color: #797979;
+    font-size: 12px;
+    letter-spacing: 0.1px;
+}
+
+.project-count {
+    width: 30px;
+    height: 30px;
+    padding: 0 !important;
+    border-radius: 50%;
+    border: 1px solid rgba(6, 6, 6, 0.64);
+    font-size: 14px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.top-count {
+        background-color: #060606;
+        border: none;
+        color: #FFFFFF;
+    }
+
+    &.active {
+        background-color: #E65F2B;
+        border: none;
+        color: #FFFFFF;
+    }
+}
+
+/* project-workload section End  */
+
+/* Remaining work section end */
