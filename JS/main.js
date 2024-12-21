@@ -5,7 +5,8 @@ const side_container = document.getElementById('side-container');
 const brand_name = document.getElementById('brand-name');
 const dashboard_menu = document.getElementById('dashBoard-menu');
 const create_project = document.getElementById('create-new-project');
-const create_btn = document.getElementById('create-project-btn-icon');
+const create_project_img = document.getElementById('add-project-btn-icon');
+const create_project_btn_txt = document.getElementById('create-project-btn-txt');
 
 // Page header 
 const manager_dropdown_icon = document.getElementById('dropdown-manager-icon');
@@ -33,8 +34,12 @@ collapse_icon.addEventListener("click", () => {
         side_container.style.alignItems = "flex-start";
         brand_name.style.opacity = 1;
         dashboard_menu.style.width = "184px";
-        create_project.style.display = "flex";
-        create_btn.style.display = "none";
+        create_project.style.backgroundColor = "#FFFFFF";
+        create_project.style.padding = "7px";
+        create_project.style.width = "100%";
+        create_project_img.style.width = "34px";
+        create_project_img.style.height = "34px";
+        create_project_btn_txt.style.display = "block";
 
         // Dash board width set 
         head_section.style.width = "calc(100vw - 260px - 17px)";
@@ -49,8 +54,12 @@ collapse_icon.addEventListener("click", () => {
         side_container.style.alignItems = "center";
         brand_name.style.opacity = 0;
         dashboard_menu.style.width = "48px";
-        create_project.style.display = "none";
-        create_btn.style.display = "flex";
+        create_project.style.backgroundColor = "transparent";
+        create_project.style.padding = 0;
+        create_project.style.width = "48px";
+        create_project_img.style.width = "48px";
+        create_project_img.style.height = "48px";
+        create_project_btn_txt.style.display = "none";
 
         // Dash board width set 
         head_section.style.width = "calc(100vw - 108px - 17px)";
@@ -103,4 +112,21 @@ progress_circles.forEach(circle => {
 
     //dynamically update the text
     text.textContent = `${percent}%`;
+});
+
+// Overall progress tracker
+document.addEventListener('DOMContentLoaded', () => {
+    const progressPath = document.querySelector('.actual-progress');
+    const progressText = document.querySelector('.percentage-value');
+    const percentage = 72; // Example: Change this value dynamically  
+
+    const radius = 40; // Radius of the arc
+    const circumference = 2 * Math.PI * radius;
+    const offset = 100 - percentage; 
+
+    progressPath.style.strokeDasharray = `${circumference / 2}`;
+    progressPath.style.strokeDashoffset = offset;
+
+    // Update text
+    progressText.textContent = `${percentage}%`;
 });

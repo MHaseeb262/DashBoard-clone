@@ -28,14 +28,10 @@
                 </div>
 
                 <div id="create-new-project" class="create-new-project">
-                    <div class="add-project-btn-icon">
+                    <div class="add-project-btn-icon" id="add-project-btn-icon">
                         <img src="/images/add-project.svg" alt="add-project-btn-icon">
                     </div>
-                    <p>Create new <br> project</p>
-                </div>
-
-                <div id="create-project-btn-icon" class="create-project-btn-icon">
-                    <img src="/images/add-project.svg" alt="add-project-btn-icon">
+                    <p id="create-project-btn-txt">Create new <br> project</p>
                 </div>
 
                 <div id="dashBoard-menu" class="dashBoard-menu">
@@ -288,7 +284,9 @@
                         <div class="progress-summary-container">
 
                             <ul>
-                                <li><h4>Name</h4></li>
+                                <li>
+                                    <h4>Name</h4>
+                                </li>
                                 <li>Nelsa web developement</li>
                                 <li>Datascale AI app </li>
                                 <li>Media channel branding</li>
@@ -296,7 +294,9 @@
                                 <li>Website builder development</li>
                             </ul>
                             <ul>
-                                <li><h4>Project manager</h4></li>
+                                <li>
+                                    <h4>Project manager</h4>
+                                </li>
                                 <li>Om prakash sao</li>
                                 <li>Neilsan mando</li>
                                 <li>Tiruvelly priya</li>
@@ -304,7 +304,9 @@
                                 <li>Sukumar rao</li>
                             </ul>
                             <ul>
-                                <li><h4>Due date</h4></li>
+                                <li>
+                                    <h4>Due date</h4>
+                                </li>
                                 <li>May 25, 2023</li>
                                 <li>Jun 20, 2023</li>
                                 <li>July 13, 2023</li>
@@ -312,20 +314,34 @@
                                 <li>Mar 15, 2024</li>
                             </ul>
                             <ul class="status-list">
-                                <li><h4>Status</h4></li>
-                                <li><div class="status complete">Completed</div></li>
-                                <li><div class="status delayed">Delayed</div></li>
-                                <li><div class="status at-risk">At risk</div></li>
-                                <li><div class="status complete">Completed</div></li>
-                                <li><div class="status on-going">On going</div></li>
+                                <li>
+                                    <h4>Status</h4>
+                                </li>
+                                <li>
+                                    <div class="status complete">Completed</div>
+                                </li>
+                                <li>
+                                    <div class="status delayed">Delayed</div>
+                                </li>
+                                <li>
+                                    <div class="status at-risk">At risk</div>
+                                </li>
+                                <li>
+                                    <div class="status complete">Completed</div>
+                                </li>
+                                <li>
+                                    <div class="status on-going">On going</div>
+                                </li>
                             </ul>
-                            <ul  class="progress-bar">
-                                <li><h4>Progress</h4></li>
+                            <ul class="progress-bar">
+                                <li>
+                                    <h4>Progress</h4>
+                                </li>
                                 <li>
                                     <div class="progress-circle" data-percent="100" data-color="#1A932E">
                                         <svg viewbox="0 0 100 100">
-                                            <circle class="background" cx="50" cy="50" r="45"/>
-                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                            <circle class="background" cx="50" cy="50" r="45" />
+                                            <circle class="progress" cx="50" cy="50" r="45" />
                                         </svg>
                                         <div class="progress-txt">100%</div>
                                     </div>
@@ -333,8 +349,8 @@
                                 <li>
                                     <div class="progress-circle" data-percent="35" data-color="#DFA510">
                                         <svg viewbox="0 0 100 100">
-                                            <circle class="background" cx="50" cy="50" r="45"/>
-                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                            <circle class="background" cx="50" cy="50" r="45" />
+                                            <circle class="progress" cx="50" cy="50" r="45" />
                                         </svg>
                                         <div class="progress-txt">35%</div>
                                     </div>
@@ -342,8 +358,8 @@
                                 <li>
                                     <div class="progress-circle" data-percent="68" data-color="#EE201C">
                                         <svg viewbox="0 0 100 100">
-                                            <circle class="background" cx="50" cy="50" r="45"/>
-                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                            <circle class="background" cx="50" cy="50" r="45" />
+                                            <circle class="progress" cx="50" cy="50" r="45" />
                                         </svg>
                                         <div class="progress-txt">68%</div>
                                     </div>
@@ -351,8 +367,8 @@
                                 <li>
                                     <div class="progress-circle" data-percent="100" data-color="#1A932E">
                                         <svg viewbox="0 0 100 100">
-                                            <circle class="background" cx="50" cy="50" r="45"/>
-                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                            <circle class="background" cx="50" cy="50" r="45" />
+                                            <circle class="progress" cx="50" cy="50" r="45" />
                                         </svg>
                                         <div class="progress-txt">100%</div>
                                     </div>
@@ -360,8 +376,8 @@
                                 <li>
                                     <div class="progress-circle" data-percent="50" data-color="#E65F2B">
                                         <svg viewbox="0 0 100 100">
-                                            <circle class="background" cx="50" cy="50" r="45"/>
-                                            <circle class="progress" cx="50" cy="50" r="45"/>
+                                            <circle class="background" cx="50" cy="50" r="45" />
+                                            <circle class="progress" cx="50" cy="50" r="45" />
                                         </svg>
                                         <div class="progress-txt">50%</div>
                                     </div>
@@ -379,6 +395,47 @@
                             <p>All</p>
                             <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
                         </div>
+                    </div>                    
+                    <div class="overall-progress-container">
+
+                        <div class="progress-track">
+                            <svg viewBox="0 0 100 50">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="red" />
+                                        <stop offset="25%" stop-color="orange" />
+                                        <stop offset="66%" stop-color="yellow" />
+                                        <stop offset="100%" stop-color="green" />
+                                    </linearGradient>
+                                </defs>
+                                <path class="process-track-background" d="M10 45 A40 40 0 0 1 90 45" />
+                                <path class="actual-progress" d="M10 45 A40 40 0 0 1 90 45" />
+                            </svg>
+                            <div class="progress-val">
+                                <div class="percentage-value">72%</div>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-count">
+                            <div class="total-project">
+                                <p class="status-value">95</p>
+                                <p class="status-label">Total projects</p>
+                            </div>
+                            <div class="complete-project">
+                                <p class="status-value">26</p>
+                                <p class="status-label">Completed</p>
+                            </div>
+                            <div class="delayed-project">
+                                <p class="status-value">35</p>
+                                <p class="status-label">Delayed</p>
+                            </div>
+                            <div class="on-going-project">
+                                <p class="status-value">35</p>
+                                <p class="status-label">On going</p>
+                            </div>
+                        </div>
+                        
                     </div>
 
                 </aside>
@@ -386,8 +443,8 @@
             </div>
             <!-- Projecy progres section End  -->
 
-             <!-- Remaining work section start -->
-              <div class="container" id="remaining-work-section">
+            <!-- Remaining work section start -->
+            <div class="container" id="remaining-work-section">
 
                 <section class="today-task">
                     <div class="today-task-container">
@@ -580,8 +637,8 @@
 
                 </aside>
 
-              </div>
-             <!-- Remaining work section end -->
+            </div>
+            <!-- Remaining work section end -->
         </div>
 
     </div>
