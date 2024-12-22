@@ -1,9 +1,14 @@
 // Side Menu 
 const collapse_icon = document.querySelector('.left-arrow');
 const menu_collapse = document.querySelector('.menu-collapse');
-const side_container = document.getElementById('side-container');
+
+const dashboard_container = document.querySelector('.dashboard-container');
+const dashboars_side_menu = document.querySelector('.dashboars-side-menu');
+const side_container = document.querySelector('.side-container');
+
 const brand_name = document.querySelector('.brand-name');
 const dashboard_menu = document.querySelector('.dashBoard-menu');
+
 const create_project = document.querySelector('.create-new-project');
 const create_project_img = document.querySelector('.add-project-btn-icon');
 const create_project_btn_txt = document.querySelector('.create-project-btn-txt');
@@ -17,8 +22,12 @@ const remaining_work_section = document.getElementById('remaining-work-section')
 // Side menu collapse/Expand section 
 collapse_icon.addEventListener("click", () => {
 
-    side_container.classList.toggle('collapse-side-container');
+    dashboars_side_menu.classList.toggle('collapse-side-container');
+    side_container.classList.toggle('side-menu');
+
+    collapse_icon.classList.toggle('side-arr-position');
     menu_collapse.classList.toggle('rotation');
+
     brand_name.classList.toggle('disable');
     create_project.classList.toggle('collapse-create-project');
     create_project_img.classList.toggle('icon-size');
@@ -31,6 +40,56 @@ collapse_icon.addEventListener("click", () => {
     progress_section.classList.toggle('set-width');
     remaining_work_section.classList.toggle('set-width');
 });
+
+if (window.innerWidth <= 1024 && window.innerWidth >= 600) {
+
+    dashboars_side_menu.classList.toggle('collapse-side-container');
+    side_container.classList.toggle('side-menu');
+
+    menu_collapse.classList.toggle('rotation');
+    brand_name.classList.toggle('disable');
+
+    create_project.classList.toggle('collapse-create-project');
+    create_project_img.classList.toggle('icon-size');
+    create_project_btn_txt.classList.toggle('hide');
+    dashboard_menu.classList.toggle('collapse-dashboard-menu');
+
+    // Dash board width set 
+    head_section.classList.toggle('set-width');
+    overview_section.classList.toggle('set-width');
+    progress_section.classList.toggle('set-width');
+    remaining_work_section.classList.toggle('set-width');
+
+    collapse_icon.addEventListener('click', () => {
+        dashboard_container.classList.toggle('position');
+        dashboars_side_menu.classList.toggle('set-height');
+
+        head_section.classList.toggle('small-devices-width');
+        overview_section.classList.toggle('small-devices-width');
+        progress_section.classList.toggle('small-devices-width');
+        remaining_work_section.classList.toggle('small-devices-width');
+    });
+}
+
+if (window.innerWidth <= 599) {
+    collapse_icon.addEventListener('click', () => {
+
+        dashboard_container.classList.toggle('position');
+        dashboars_side_menu.classList.toggle('set-height');
+        dashboars_side_menu.classList.remove('collapse-side-container');
+
+        brand_name.classList.remove('disable');
+        create_project.classList.remove('collapse-create-project');
+        create_project_img.classList.remove('icon-size');
+        create_project_btn_txt.classList.remove('hide');
+
+        dashboard_menu.classList.toggle('collapse-dashboard-menu');
+        head_section.classList.toggle('small-devices-width');
+        overview_section.classList.toggle('small-devices-width');
+        progress_section.classList.toggle('small-devices-width');
+        remaining_work_section.classList.toggle('small-devices-width');
+    });
+}
 
 // Dropdown boxes
 let open_dropdown = null;

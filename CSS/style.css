@@ -30,23 +30,59 @@ body {
     display: flex;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* Side-menu Start  */
-.side-container {
+.dashboars-side-menu {
     width: 260px;
-    height: 1124px;
+    height: 100%;
     padding: 35px;
     background-color: #060606;
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    position: relative;
+    justify-content: space-between;
     transition: all 0.5s ease-in-out;
 }
 
-.collapse-side-container{
-    width: 108px !important;
-    padding: 35px 0 !important;
-    align-items: center !important;
+.side-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.collapse-side-container {
+    width: 108px;
+    padding: 35px 0;
+    align-items: center;
+}
+
+.set-height {
+    height: 1080px;
+}
+
+.side-menu {
+    align-items: center;
 }
 
 .brand-name {
@@ -57,7 +93,7 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-.disable{
+.disable {
     opacity: 0 !important;
 }
 
@@ -78,16 +114,17 @@ body {
     border-radius: 50%;
     position: absolute;
     z-index: 100;
-    right: -15px;
+    left: -46px;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
-.menu-collapse{
+.menu-collapse {
     transform: rotate(0deg);
     transition: transform 0.5s ease-in-out;
 }
 
-.rotation{
+.rotation {
     transform: rotate(180deg);
 }
 
@@ -103,7 +140,7 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-.collapse-create-project{
+.collapse-create-project {
     width: 48px;
     background-color: transparent;
     padding: 0;
@@ -122,7 +159,7 @@ body {
     cursor: pointer;
 }
 
-.icon-size{
+.icon-size {
     width: 48px;
     height: 48px;
 }
@@ -140,7 +177,7 @@ body {
     text-decoration: underline;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
@@ -149,7 +186,7 @@ body {
     transition: width 0.5s ease-in-out;
 }
 
-.collapse-dashboard-menu{
+.collapse-dashboard-menu {
     width: 48px;
 }
 
@@ -198,8 +235,6 @@ body {
     border: none;
     border-radius: 50%;
     background-color: #E65F2B;
-    position: absolute;
-    bottom: 25px;
 }
 
 /* Side-menu End  */
@@ -212,8 +247,6 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 0.5px solid #dfd1c8;
-    /* position: absolute;
-    left: 260px; */
 }
 
 #head-section,
@@ -223,7 +256,7 @@ body {
     transition: width 0.5s ease-in-out;
 }
 
-.set-width{
+.set-width {
     width: calc(100vw - 108px - 17px) !important;
 }
 
@@ -232,6 +265,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .nav-bar h1 {
@@ -248,7 +282,7 @@ body {
 }
 
 .search-bar {
-    width: 336px;
+    width: 270px;
     height: 48px;
     padding: 13px;
     border-radius: 55px;
@@ -263,7 +297,7 @@ body {
 }
 
 .input-search {
-    width: 277px;
+    width: 100%;
     border: none;
     outline: none;
     color: rgba(6, 6, 6, 0.4);
@@ -328,7 +362,6 @@ body {
 
 .dropdown-box {
     width: 160px;
-    padding: 16px 0;
     position: absolute;
     top: 22px;
     z-index: -1;
@@ -343,11 +376,10 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 11px;
 }
 
 .dropdown-list-item {
-    padding: 13px;
+    padding: 8px;
     font-family: 'Aeonik';
     letter-spacing: 0.2px;
     font-size: 14px;
@@ -363,6 +395,15 @@ body {
 .dropdown-list-item a {
     color: #060606;
     text-decoration: none;
+}
+
+.menu-bar {
+    display: none;
+    cursor: pointer;
+}
+
+.small-devices-width {
+    width: calc(100vw - 17px) !important;
 }
 
 /* Navigation-bar-End */
@@ -405,12 +446,12 @@ body {
     position: relative;
 }
 
-.dropdown-icon{
+.dropdown-icon {
     transition: transform 0.5s ease-in-out;
 }
 
-.remaining-days-dropdown-box{
-    right: -16px;
+.remaining-days-dropdown-box {
+    right: 0;
     transition: all 0.5s ease-in-out;
 }
 
@@ -420,7 +461,7 @@ body {
 }
 
 .box {
-    width: calc(100vw - 108px - 75% - 30px - 48px);
+    width: 25%;
     padding: 18px 43px 24px 18px;
     display: flex;
     flex-direction: column;
@@ -502,9 +543,11 @@ body {
     padding: 18px 18px 29px;
     border-radius: 14px;
     background-color: rgba(255, 255, 255, 0.34);
+    overflow-x: auto;
 }
 
 .project-container {
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -544,56 +587,53 @@ body {
     letter-spacing: 0.1px;
 }
 
-.project-dropdown-box{
+.project-dropdown-box {
     width: 180px;
     right: -42px;
     transition: all 0.5s ease-in-out;
 }
 
-.project-manager-dropdown-box{
+.project-manager-dropdown-box {
     right: -5px;
     transition: all 0.5s ease-in-out;
 }
 
-.project-status-dropdown-box{
-    right: -41px;
+.project-status-dropdown-box {
+    right: 0;
     transition: all 0.5s ease-in-out;
 }
 
-.progress-summary-container {
-    display: flex;
-    justify-content: space-between;
+.progress-summary-container table {
+    width: 100%;
 }
 
-.progress-summary-container ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
+table thead tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.progress-summary-container ul h4 {
-    padding-bottom: 10px;
+table thead th {
     font-family: 'Aeonik';
     color: #060606;
     font-size: 14px;
     letter-spacing: 0.1px;
 }
 
-.progress-summary-container ul li {
+table tbody td {
     font-family: 'Aeonik';
     color: #060606;
     font-size: 14px;
     letter-spacing: 0.1px;
-    display: flex;
 }
 
-.status-list {
-    gap: 18px !important;
+table td,
+th {
+    padding-bottom: 11px;
+    border-spacing: 11px 0;
+    text-align: left;
 }
 
-.status-list h4 {
-    padding-bottom: 15px !important;
+table tbody td:last-child {
+    padding: 0 11px;
 }
 
 .complete,
@@ -719,8 +759,8 @@ body {
     letter-spacing: 0.1px;
 }
 
-.overall-progress-dropdown-box{
-    right: -41px;
+.overall-progress-dropdown-box {
+    right: -17px;
     transition: all 0.5s ease-in-out;
 }
 
@@ -837,9 +877,11 @@ body {
     padding: 18px 18px 29px;
     border-radius: 14px;
     background-color: rgba(255, 255, 255, 0.34);
+    overflow-x: auto;
 }
 
 .today-task-container {
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -943,9 +985,11 @@ body {
     justify-content: space-between;
     border-radius: 14px;
     background-color: rgba(255, 255, 255, 0.34);
+    overflow-x: auto;
 }
 
 .project-workload-head {
+    min-width: 400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -974,12 +1018,13 @@ body {
     letter-spacing: 0.1px;
 }
 
-.remaining-months-dropdown-box{
+.remaining-months-dropdown-box {
     right: -11px;
     transition: all 0.5s ease-in-out;
 }
 
 .project-workload-container {
+    min-width: 400px;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
@@ -1027,3 +1072,179 @@ body {
 /* project-workload section End  */
 
 /* Remaining work section end */
+
+/* Media queries for tablets  */
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    /* header section start */
+    .nav-search {
+        display: none;
+    }
+
+    .side-arr-position {
+        position: fixed !important;
+        left: 244px;
+    }
+
+    .menu-bar {
+        display: flex;
+    }
+
+    .position {
+        height: 100vh;
+        position: fixed;
+        overflow-y: auto;
+        z-index: 1;
+    }
+
+    /* header section End */
+
+    /* overview section start */
+
+    .overview-row02 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 21px;
+    }
+
+    .box {
+        width: 48%;
+    }
+
+    /* overview section End */
+
+
+    /* progress section start */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project-summary,
+    .overall-progress,
+    .today-task,
+    .project-workload {
+        width: 100%;
+    }
+
+    .overall-progress-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progress-count {
+        gap: 41px;
+    }
+
+    /* progress section End */
+
+    .task01,
+    .task02,
+    .task03,
+    .task04,
+    .task05 {
+        width: 100%;
+    }
+}
+
+/* Media queries for tablets  */
+
+@media only screen and (max-width: 599px) {
+
+    /* side menu section start  */
+    .dashboard-container {
+        display: none;
+    }
+
+    .position {
+        height: 100vh;
+        position: fixed;
+        overflow-y: auto;
+        display: flex;
+        z-index: 1;
+    }
+
+    /* side menu section End */
+
+    /* header section start */
+    .head-container,
+    .overview-section,
+    .container {
+        width: calc(100vw - 17px);
+    }
+
+    .left-arrow {
+        position: unset;
+        transform: rotate(180deg);
+    }
+
+    .side-arr-position {
+        position: fixed !important;
+        left: 244px;
+    }
+
+    .nav-bar h1 {
+        font-size: 27px;
+    }
+
+    .nav-search {
+        display: none;
+    }
+
+    .menu-bar {
+        display: flex;
+    }
+
+    /* header section End */
+
+    /* overview section start */
+
+    .overview-row02 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 21px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    /* overview section End */
+
+    /* progress section start */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project-summary,
+    .overall-progress,
+    .today-task,
+    .project-workload {
+        width: 100%;
+    }
+
+    .overall-progress-container {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    .progress-count {
+        flex-direction: column;
+        gap: 41px;
+    }
+
+    /* progress section End */
+
+    .task01,
+    .task02,
+    .task03,
+    .task04,
+    .task05 {
+        width: 100%;
+    }
+}
