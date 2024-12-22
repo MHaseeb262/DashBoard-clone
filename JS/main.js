@@ -1,19 +1,12 @@
 // Side Menu 
-const collapse_icon = document.getElementById('collapse-icon');
-const menu_collapse = document.getElementById('menu-collapse');
+const collapse_icon = document.querySelector('.left-arrow');
+const menu_collapse = document.querySelector('.menu-collapse');
 const side_container = document.getElementById('side-container');
-const brand_name = document.getElementById('brand-name');
-const dashboard_menu = document.getElementById('dashBoard-menu');
-const create_project = document.getElementById('create-new-project');
-const create_project_img = document.getElementById('add-project-btn-icon');
-const create_project_btn_txt = document.getElementById('create-project-btn-txt');
-
-// Page header 
-const manager_dropdown_icon = document.getElementById('dropdown-manager-icon');
-const dropdown_box = document.getElementById('dropdown-box');
-
-
-let rotation = 0;
+const brand_name = document.querySelector('.brand-name');
+const dashboard_menu = document.querySelector('.dashBoard-menu');
+const create_project = document.querySelector('.create-new-project');
+const create_project_img = document.querySelector('.add-project-btn-icon');
+const create_project_btn_txt = document.querySelector('.create-project-btn-txt');
 
 // DashBoard Page 
 const head_section = document.getElementById('head-section');
@@ -21,74 +14,66 @@ const overview_section = document.getElementById('overview-section');
 const progress_section = document.getElementById('progress-section');
 const remaining_work_section = document.getElementById('remaining-work-section');
 
-
-
+// Side menu collapse/Expand section 
 collapse_icon.addEventListener("click", () => {
-    rotation += 180;
-    menu_collapse.style.transform = `rotate(${rotation}deg)`;
 
-    if (side_container.style.width === "108px") {
+    side_container.classList.toggle('collapse-side-container');
+    menu_collapse.classList.toggle('rotation');
+    brand_name.classList.toggle('disable');
+    create_project.classList.toggle('collapse-create-project');
+    create_project_img.classList.toggle('icon-size');
+    create_project_btn_txt.classList.toggle('hide');
+    dashboard_menu.classList.toggle('collapse-dashboard-menu');
 
-        side_container.style.width = "260px";
-        side_container.style.padding = "35px";
-        side_container.style.alignItems = "flex-start";
-        brand_name.style.opacity = 1;
-        dashboard_menu.style.width = "184px";
-        create_project.style.backgroundColor = "#FFFFFF";
-        create_project.style.padding = "7px";
-        create_project.style.width = "100%";
-        create_project_img.style.width = "34px";
-        create_project_img.style.height = "34px";
-        create_project_btn_txt.style.display = "block";
+    // Dash board width set 
+    head_section.classList.toggle('set-width');
+    overview_section.classList.toggle('set-width');
+    progress_section.classList.toggle('set-width');
+    remaining_work_section.classList.toggle('set-width');
+});
 
-        // Dash board width set 
-        head_section.style.width = "calc(100vw - 260px - 17px)";
-        overview_section.style.width = "calc(100vw - 260px - 17px)";
-        progress_section.style.width = "calc(100vw - 260px - 17px)";
-        remaining_work_section.style.width = "calc(100vw - 260px - 17px)";
+// Dropdown boxes
+let open_dropdown = null;
 
-    } else {
+document.addEventListener('click', (event) => {
+    const target = event.target;
+    const targetId = target.dataset.target;
+    console.log(targetId);
 
-        side_container.style.width = "108px";
-        side_container.style.padding = "35px 0px";
-        side_container.style.alignItems = "center";
-        brand_name.style.opacity = 0;
-        dashboard_menu.style.width = "48px";
-        create_project.style.backgroundColor = "transparent";
-        create_project.style.padding = 0;
-        create_project.style.width = "48px";
-        create_project_img.style.width = "48px";
-        create_project_img.style.height = "48px";
-        create_project_btn_txt.style.display = "none";
+    if (targetId) {
+        const dropdownBox = document.getElementById(targetId);
+        const icon = document.querySelector(`.dropdown-icon[data-target="${targetId}"]`);
 
-        // Dash board width set 
-        head_section.style.width = "calc(100vw - 108px - 17px)";
-        overview_section.style.width = "calc(100vw - 108px - 17px)";
-        progress_section.style.width = "calc(100vw - 108px - 17px)";
-        remaining_work_section.style.width = "calc(100vw - 108px - 17px)";
-        
+        if (open_dropdown && open_dropdown !== dropdownBox) {
+            close_dropdown(open_dropdown);
+        }
 
+        if (dropdownBox.style.opacity == 0) {
+            open_dropdown = dropdownBox;
+            open_dropdown.style.opacity = 1;
+            open_dropdown.style.top = "40px";
+            open_dropdown.style.zIndex = 1;
+            icon.style.transform = "rotate(-180deg)";
+        } else {
+            close_dropdown(dropdownBox);
+            open_dropdown = null;
+        }
+        event.stopPropagation();
+    } else if (!event.target.closest('.dropdown-box')) {
+        if (open_dropdown) {
+            close_dropdown(open_dropdown);
+            open_dropdown = null;
+        }
     }
 });
 
-manager_dropdown_icon.addEventListener('click', () => {
-    rotation += 180;
-    manager_dropdown_icon.style.transform = `rotate(${rotation}deg)`;
-
-    console.log(rotation);
-
-    display_dropdown(rotation);
-});
-
-function display_dropdown(rotate) {
-    if (rotate === 180) {
-        dropdown_box.style.top = "40px";
-        dropdown_box.style.opacity = 1;
-    } else {
-        dropdown_box.style.top = "22px";
-        dropdown_box.style.opacity = 0;
-        rotation = 0;
-    }
+// Function for Close Dropdown 
+function close_dropdown(dropdownBox) {
+    const icon = document.querySelector(`.dropdown-icon[data-target ="${dropdownBox.id}"]`);
+    dropdownBox.style.opacity = 0;
+    dropdownBox.style.top = "22px";
+    open_dropdown.style.zIndex = -1;
+    if (icon) icon.style.transform = "rotate(0deg)";
 }
 
 // progress calculation 
@@ -122,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const radius = 40; // Radius of the arc
     const circumference = 2 * Math.PI * radius;
-    const offset = 100 - percentage; 
+    const offset = 100 - percentage;
 
     progressPath.style.strokeDasharray = `${circumference / 2}`;
     progressPath.style.strokeDashoffset = offset;

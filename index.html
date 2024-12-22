@@ -18,26 +18,26 @@
         <aside id="dashboars-side-menu">
             <div id="side-container" class="side-container">
 
-                <div id="brand-name" class="brand-name">
+                <div class="brand-name">
                     <img src="/images/Brand_Icon.svg" alt="Brand_Icon">
                     <h2>Promage</h2>
                 </div>
 
-                <div id="collapse-icon" class="left-arrow">
-                    <img id="menu-collapse" src="/images/left-arrow-icon.svg" alt="left-arrow-icon">
+                <div class="left-arrow">
+                    <img class="menu-collapse" src="/images/left-arrow-icon.svg" alt="left-arrow-icon">
                 </div>
 
-                <div id="create-new-project" class="create-new-project">
-                    <div class="add-project-btn-icon" id="add-project-btn-icon">
+                <div class="create-new-project">
+                    <div class="add-project-btn-icon">
                         <img src="/images/add-project.svg" alt="add-project-btn-icon">
                     </div>
-                    <p id="create-project-btn-txt">Create new <br> project</p>
+                    <p class="create-project-btn-txt">Create new <br> project</p>
                 </div>
 
-                <div id="dashBoard-menu" class="dashBoard-menu">
+                <div class="dashBoard-menu">
 
                     <ul class="menu-list">
-                        <li class="list-item item01 hide">
+                        <li class="list-item item01">
                             <img src="/images/dashboard-menu-icon.svg" alt="dashboard-menu-icon">
                             <span title="Dashboard" class="item-txt">Dashboard</span>
                         </li>
@@ -125,17 +125,19 @@
                                 </svg>
 
                             </div>
-                            <div class="product-manager">
+                            <div class="product-manager" id="product-manager">
                                 <img src="/images/manager-pic.png" alt="manager-pic">
-                                <div class="manager-dropdown">
+                                <div class="manager-dropdown" data-target="manager-dropdown-box">
 
                                     <div class="about-manager">
                                         <p class="manager-name">Alex meian</p>
                                         <p class="manager-post">Prodcut manager</p>
                                     </div>
-                                    <img id="dropdown-manager-icon" src="/images/drop-down-icon.svg"
+                                    <!-- <div class="dropdown-manager-icon"> -->
+                                    <img class="dropdown-icon" data-target="manager-dropdown-box" src="/images/drop-down-icon.svg"
                                         alt="drop-down-icon">
-                                    <div id="dropdown-box" class="dropdown-box">
+                                    <!-- </div> -->
+                                    <div id="manager-dropdown-box" class="manager-dropdown-box dropdown-box">
                                         <ul class="dropdown-list">
                                             <li class="dropdown-list-item"><a href="#">Asim Siddiqui</a></li>
                                             <li class="dropdown-list-item"><a href="#">Rizwan Qureshi</a></li>
@@ -160,9 +162,16 @@
                     <div class="overview-row01">
 
                         <span>Overview</span>
-                        <div class="remaining-days">
+                        <div class="remaining-days" data-target="remaining-days-dropdown-box">
                             <p>Last 30 days</p>
-                            <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                            <img class="dropdown-icon" data-target="remaining-days-dropdown-box" src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                            <div id="remaining-days-dropdown-box" class="remaining-days-dropdown-box dropdown-box">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list-item"><a href="#">Last 20 days</a></li>
+                                    <li class="dropdown-list-item"><a href="#">Last 10 days</a></li>
+                                    <li class="dropdown-list-item"><a href="#">Last 5 days</a></li>
+                                </ul>
+                            </div>
                         </div>
 
                     </div>
@@ -265,17 +274,42 @@
                             <h3>Project summary</h3>
                             <div class="project-saction">
 
-                                <div class="dropdown prject-dropdown">
+                                <div class="dropdown prject-dropdown" data-target="project-dropdown-box">
                                     <p>Project</p>
-                                    <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                    <img class="dropdown-icon" data-target="project-dropdown-box" src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                    <div id="project-dropdown-box" class="project-dropdown-box dropdown-box">
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-list-item"><a href="#">Web development</a></li>
+                                            <li class="dropdown-list-item"><a href="#">App development</a></li>
+                                            <li class="dropdown-list-item"><a href="#">iOS app development</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="dropdown prject-manager-dropdown">
+                                <div class="dropdown prject-manager-dropdown" data-target="project-manager-dropdown-box">
                                     <p>Project manager</p>
-                                    <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                    <img class="dropdown-icon" data-target="project-manager-dropdown-box" src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                    <div id="project-manager-dropdown-box"
+                                        class="project-manager-dropdown-box dropdown-box">
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-list-item"><a href="#">Asim Siddiqui</a></li>
+                                            <li class="dropdown-list-item"><a href="#">Rizwan Qureshi</a></li>
+                                            <li class="dropdown-list-item"><a href="#">Fasil Qureshi</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="dropdown prject-status-dropdown">
+                                <div class="dropdown prject-status-dropdown" data-target="project-status-dropdown-box">
                                     <p>Status</p>
-                                    <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                    <img class="dropdown-icon" data-target="project-status-dropdown-box" src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                                    <div id="project-status-dropdown-box"
+                                        class="project-status-dropdown-box dropdown-box">
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-list-item"><a href="#">All</a></li>
+                                            <li class="dropdown-list-item"><a href="#">Completed</a></li>
+                                            <li class="dropdown-list-item"><a href="#">On Going</a></li>
+                                            <li class="dropdown-list-item"><a href="#">Delayed</a></li>
+                                            <li class="dropdown-list-item"><a href="#">At Risk</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                             </div>
@@ -391,11 +425,20 @@
 
                     <div class="overall-progress-head">
                         <h2>Overall Progress</h2>
-                        <div class="all-progress-dropdown">
+                        <div class="all-progress-dropdown" data-target="overall-progress-dropdown-box">
                             <p>All</p>
-                            <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                            <img class="dropdown-icon" data-target="overall-progress-dropdown-box" src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                            <div id="overall-progress-dropdown-box"
+                                class="overall-progress-dropdown-box dropdown-box">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list-item"><a href="#">All</a></li>
+                                    <li class="dropdown-list-item"><a href="#">Completed</a></li>
+                                    <li class="dropdown-list-item"><a href="#">On Going</a></li>
+                                    <li class="dropdown-list-item"><a href="#">Delayed</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="overall-progress-container">
 
                         <div class="progress-track">
@@ -416,7 +459,7 @@
                                 <span>Completed</span>
                             </div>
                         </div>
-                        
+
                         <div class="progress-count">
                             <div class="total-project">
                                 <p class="status-value">95</p>
@@ -435,7 +478,7 @@
                                 <p class="status-label">On going</p>
                             </div>
                         </div>
-                        
+
                     </div>
 
                 </aside>
@@ -540,9 +583,16 @@
                     <div class="project-workload-head">
 
                         <h4>Projects Workload</h4>
-                        <div class="workload-dropdown">
+                        <div class="workload-dropdown" data-target="remaining-months-dropdown-box">
                             <p>Last 3 months</p>
-                            <img src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                            <img class="dropdown-icon" data-target="remaining-months-dropdown-box" src="/images/drop-down-icon.svg" alt="drop-down-icon">
+                            <div id="remaining-months-dropdown-box" class="remaining-months-dropdown-box dropdown-box">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list-item"><a href="#">Last 20 months</a></li>
+                                    <li class="dropdown-list-item"><a href="#">Last 10 months</a></li>
+                                    <li class="dropdown-list-item"><a href="#">Last 5 months</a></li>
+                                </ul>
+                            </div>
                         </div>
 
                     </div>

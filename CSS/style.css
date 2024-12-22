@@ -40,26 +40,31 @@ body {
     flex-direction: column;
     gap: 60px;
     position: relative;
+    transition: all 0.5s ease-in-out;
 }
 
-#side-container {
-    transition: all 0.5s ease-in-out;
+.collapse-side-container{
+    width: 108px !important;
+    padding: 35px 0 !important;
+    align-items: center !important;
 }
 
 .brand-name {
     display: flex;
     align-items: center;
     gap: 11px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.disable{
+    opacity: 0 !important;
 }
 
 .brand-name h2 {
     font-family: 'Aeonik';
     letter-spacing: 0.2px;
     color: #FFFFFF;
-}
-
-#brand-name {
-    transition: opacity 0.5s ease-in-out;
 }
 
 .left-arrow {
@@ -77,11 +82,17 @@ body {
     cursor: pointer;
 }
 
-#menu-collapse {
+.menu-collapse{
+    transform: rotate(0deg);
     transition: transform 0.5s ease-in-out;
 }
 
+.rotation{
+    transform: rotate(180deg);
+}
+
 .create-new-project {
+    width: 100%;
     padding: 7px;
     display: flex;
     align-items: center;
@@ -90,6 +101,12 @@ body {
     border-radius: 24px;
     background-color: #FFFFFF;
     transition: all 0.5s ease-in-out;
+}
+
+.collapse-create-project{
+    width: 48px;
+    background-color: transparent;
+    padding: 0;
 }
 
 .add-project-btn-icon {
@@ -105,7 +122,12 @@ body {
     cursor: pointer;
 }
 
-.create-new-project p {
+.icon-size{
+    width: 48px;
+    height: 48px;
+}
+
+.create-project-btn-txt {
     font-size: 14px;
     font-family: 'Aeonik';
     line-height: 16px;
@@ -114,13 +136,21 @@ body {
     cursor: pointer;
 }
 
-.create-new-project p:hover {
+.create-project-btn-txt:hover {
     text-decoration: underline;
+}
+
+.hide{
+    display: none;
 }
 
 .dashBoard-menu {
     width: 184px;
     transition: width 0.5s ease-in-out;
+}
+
+.collapse-dashboard-menu{
+    width: 48px;
 }
 
 .menu-list {
@@ -191,6 +221,10 @@ body {
 #remaining-work-section,
 #progress-section {
     transition: width 0.5s ease-in-out;
+}
+
+.set-width{
+    width: calc(100vw - 108px - 17px) !important;
 }
 
 .nav-bar {
@@ -297,12 +331,11 @@ body {
     padding: 16px 0;
     position: absolute;
     top: 22px;
-    z-index: 1000;
+    z-index: -1;
     background-color: #FFFFFF;
+    border-radius: 11px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     opacity: 0;
-}
-
-#dropdown-box {
     transition: all 0.5s ease-in-out
 }
 
@@ -363,12 +396,22 @@ body {
     background-color: #FFFFFF;
     border-radius: 17px;
     font-family: 'Aeonik';
-    letter-spacing: 1%;
+    letter-spacing: 0.1px;
     color: #060606;
     font-size: 14px;
     display: flex;
     align-items: center;
     gap: 11px;
+    position: relative;
+}
+
+.dropdown-icon{
+    transition: transform 0.5s ease-in-out;
+}
+
+.remaining-days-dropdown-box{
+    right: -16px;
+    transition: all 0.5s ease-in-out;
 }
 
 .overview-row02 {
@@ -491,6 +534,7 @@ body {
     display: flex;
     gap: 10px;
     background-color: #FFFFFF;
+    position: relative;
 }
 
 .dropdown p {
@@ -498,6 +542,22 @@ body {
     color: #060606;
     font-size: 14px;
     letter-spacing: 0.1px;
+}
+
+.project-dropdown-box{
+    width: 180px;
+    right: -42px;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-manager-dropdown-box{
+    right: -5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-status-dropdown-box{
+    right: -41px;
+    transition: all 0.5s ease-in-out;
 }
 
 .progress-summary-container {
@@ -542,6 +602,9 @@ body {
     border-radius: 20px;
     background-color: rgba(26, 147, 46, 0.18);
     color: #1A932E;
+    font-family: 'Aeonik';
+    font-size: 14px;
+    letter-spacing: 0.1px;
 }
 
 .delayed {
@@ -549,6 +612,9 @@ body {
     border-radius: 20px;
     background-color: rgba(226, 177, 51, 0.18);
     color: #DFA510;
+    font-family: 'Aeonik';
+    font-size: 14px;
+    letter-spacing: 0.1px;
 }
 
 .at-risk,
@@ -557,6 +623,9 @@ body {
     border-radius: 20px;
     background-color: rgba(238, 32, 28, 0.18);
     color: #EE201C;
+    font-family: 'Aeonik';
+    font-size: 14px;
+    letter-spacing: 0.1px;
 }
 
 .on-going {
@@ -564,6 +633,9 @@ body {
     border-radius: 20px;
     background-color: rgba(223, 95, 43, 0.18);
     color: #E65F2B;
+    font-family: 'Aeonik';
+    font-size: 14px;
+    letter-spacing: 0.1px;
 }
 
 .progress-bar {
@@ -637,6 +709,7 @@ body {
     gap: 11px;
     background-color: #FFFFFF;
     border-radius: 17px;
+    position: relative;
 }
 
 .all-progress-dropdown p {
@@ -646,7 +719,12 @@ body {
     letter-spacing: 0.1px;
 }
 
-.progress-track{
+.overall-progress-dropdown-box{
+    right: -41px;
+    transition: all 0.5s ease-in-out;
+}
+
+.progress-track {
     position: relative;
     width: 100%;
     height: 178px;
@@ -656,18 +734,18 @@ body {
     margin: 20px 0;
 }
 
-.progress-track svg{
+.progress-track svg {
     width: 100%;
     height: 100%;
 }
 
-.progress-track .process-track-background{
+.progress-track .process-track-background {
     fill: none;
     stroke: rgba(0, 0, 0, 0.08);
     stroke-width: 5;
 }
 
-.progress-track .actual-progress{
+.progress-track .actual-progress {
     fill: none;
     stroke-width: 5;
     stroke-linecap: round;
@@ -677,14 +755,14 @@ body {
     transition: stroke-dashoffset 1s ease;
 }
 
-.progress-val{
+.progress-val {
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.percentage-value{
+.percentage-value {
     font-family: 'Aeonik';
     color: #060606;
     text-align: center;
@@ -693,12 +771,12 @@ body {
     letter-spacing: 0.1px;
 }
 
-.progress-val span{
+.progress-val span {
     font-family: 'Aeonik';
     color: #9A9A9A;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0.1px;    
+    letter-spacing: 0.1px;
 }
 
 .progress-count {
@@ -886,6 +964,7 @@ body {
     gap: 11px;
     background-color: #FFFFFF;
     border-radius: 17px;
+    position: relative;
 }
 
 .workload-dropdown p {
@@ -893,6 +972,11 @@ body {
     color: #060606;
     font-size: 14px;
     letter-spacing: 0.1px;
+}
+
+.remaining-months-dropdown-box{
+    right: -11px;
+    transition: all 0.5s ease-in-out;
 }
 
 .project-workload-container {
